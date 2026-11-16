@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#5546e8">
+  <meta name="description" content="A calmer way to check suspicious messages, compare profiles and take the next step. Private, transparent identity safety tools that run in your browser.">
+  <title>IdentityShield — Your digital safety space</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap">
+  <script src="engine.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to workspace</a>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <a class="brand" href="#scanner" aria-label="IdentityShield home">
+      <span class="brand-symbol"><svg viewBox="0 0 32 36" fill="none" aria-hidden="true"><path d="M16 2 29 7v9c0 8-5.5 14-13 18C8.5 30 3 24 3 16V7L16 2Z" stroke="currentColor" stroke-width="2.4"/><path d="m10 17 4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span>Identity<span class="brand-light">Shield</span><small>YOUR DIGITAL SAFETY SPACE</small></span>
+    </a>
+    <div class="workspace-label"><span class="workspace-avatar">P</span><span>Personal workspace<small>Private by design</small></span><span class="workspace-dot"></span></div>
+    <div class="nav-caption">PROTECT YOUR IDENTITY</div>
+    <nav class="nav-list">
+      <a href="#scanner" data-route="scanner" class="nav-link"><span data-icon="scan"></span>Message scanner<span class="nav-indicator"></span></a>
+      <a href="#compare" data-route="compare" class="nav-link"><span data-icon="users"></span>Profile comparison</a>
+      <a href="#response" data-route="response" class="nav-link"><span data-icon="clipboard"></span>Response plan</a>
+    </nav>
+    <div class="nav-caption second">YOUR WORKSPACE</div>
+    <nav class="nav-list"><a href="#history" data-route="history" class="nav-link"><span data-icon="history"></span>Saved checks<span class="count-badge" id="history-count">0</span></a></nav>
+    <div class="sidebar-bottom">
+      <div class="privacy-card"><span class="privacy-icon" data-icon="lock"></span><strong>Your data. Your device.</strong><p>Checks run in this browser. Your messages stay with you.</p><button class="text-link" data-action="how">How it works <span data-icon="arrow-right"></span></button></div>
+      <button class="sidebar-help" data-action="how"><span data-icon="help"></span>About IdentityShield<span class="version">v1.0</span></button>
+      <div class="made-for">Made for a safer digital world <span>✦</span></div>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-left"><button class="icon-button mobile-menu" id="menu-button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button><span class="breadcrumb-parent">Workspace</span><span class="breadcrumb-slash">/</span><span id="breadcrumb-current">Message scanner</span></div>
+      <div class="topbar-right"><span class="local-status"><span></span>Browser-local checks</span><button class="icon-button about-button" data-action="how" aria-label="How IdentityShield works"><span data-icon="help"></span></button><span class="user-avatar" title="Personal workspace">P</span></div>
+    </header>
+    <main id="main-content" class="main-content" tabindex="-1"></main>
+    <footer class="app-footer"><span><span class="footer-shield" data-icon="shield"></span>A little more clarity. A little more control.</span><span>Pattern checks, not identity verification.<button data-action="how">Our approach <span data-icon="external"></span></button></span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal" class="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+</body>
+</html>

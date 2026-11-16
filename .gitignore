@@ -1,0 +1,17 @@
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local dependencies, hosting state and build output
+node_modules/
+.vercel/
+dist/
+coverage/
+__pycache__/
+*.log
+
